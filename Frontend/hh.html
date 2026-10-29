@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção de Contato com Redes Sociais</title>
+    <!-- Importação do Font Awesome para carregar os ícones das redes sociais -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        .contato-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .contato-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contato-info h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contato-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        /* --- ESTILIZAÇÃO DOS ÍCONES SOCIAIS --- */
+        .redes-sociais {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-4px);
+            filter: brightness(0.9);
+        }
+
+        /* Cores oficiais das marcas */
+        .linkedin { background-color: #0077b5; }
+        .github   { background-color: #24292e; }
+        .instagram{ background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+        .whatsapp { background-color: #25d366; }
+
+        /* Estilos do Formulário */
+        .contato-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn-enviar:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .contato-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="contato" class="contato-section">
+        <div class="contato-container">
+            
+            <!-- Coluna da Esquerda: Textos e Redes Sociais -->
+            <div class="contato-info">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma dúvida ou quer iniciar um projeto? Preencha o formulário ao lado ou me encontre nas redes sociais abaixo.</p>
+                
+                <div class="info-item">
+                    <strong>✉️ E-mail:</strong> seu-email@provedor.com
+                </div>
+
+                <!-- Bloco de Links Sociais -->
+                <div class="redes-sociais">
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com" target="_blank" class="social-btn linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com" target="_blank" class="social-btn github" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    
+                    <!-- WhatsApp (Substitua os zeros pelo seu número com DDD. Ex: 5511999999999) -->
+                    <a href="https://wa.me" target="_blank" class="social-btn whatsapp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita: Formulário -->
+            <form class="contato-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+</html>
